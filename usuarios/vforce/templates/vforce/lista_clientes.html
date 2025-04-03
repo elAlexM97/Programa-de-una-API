@@ -28,7 +28,7 @@
         }
 
         .btn-warning {
-            background-color: #ffc107;
+            background-color: #ffc107; /* Amarillo */
             border-color: #ffc107;
         }
 
@@ -38,7 +38,7 @@
         }
 
         .btn-danger {
-            background-color: #dc3545;
+            background-color: #dc3545; /* Rojo */
             border-color: #dc3545;
         }
 
@@ -57,7 +57,7 @@
         }
 
         .no-results {
-            background: rgba(255, 0, 0, 0.05) !important;
+            background: rgba(255, 0, 0, 0.05) !important; /* Fondo rojo claro cuando no hay resultados */
         }
 
         .table-hover tbody tr:hover {
@@ -67,7 +67,7 @@
         .table {
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra de la tabla */
         }
     </style>
 </head>
@@ -81,7 +81,7 @@
                 </h2>
                 <div class="d-flex align-items-center gap-3">
                     <a href="{% url 'crear_cliente' %}" class="btn btn-success">
-                        <i class="bi bi-plus-circle"></i> Agregar Usuario
+                        <i class="bi bi-plus-circle"></i> Agregar Usuario  <!-- Botón para agregar un nuevo usuario -->
                     </a>
                 </div>
             </div>
@@ -91,10 +91,10 @@
                 <div class="mb-4">
                     <div class="input-group search-box">
                         <span class="input-group-text">
-                            <i class="bi bi-search"></i>
+                            <i class="bi bi-search"></i>  <!-- Icono de búsqueda -->
                         </span>
                         <input type="text" id="searchInput" class="form-control" 
-                               placeholder="Buscar clientes...">
+                               placeholder="Buscar clientes...">  <!-- Input para buscar clientes -->
                     </div>
                 </div>
 
@@ -118,11 +118,11 @@
                                     <div class="d-flex gap-2 justify-content-end">
                                         <a href="{% url 'editar_cliente' cliente.id %}" 
                                            class="btn btn-warning btn-sm">
-                                            <i class="bi bi-pencil-square"></i> Editar
+                                            <i class="bi bi-pencil-square"></i> Editar  <!-- Botón para editar el cliente -->
                                         </a>
                                         <a href="{% url 'eliminar_cliente' cliente.id %}" 
                                            class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro de que deseas eliminar este cliente?');">
-                                            <i class="bi bi-trash3"></i> Eliminar
+                                            <i class="bi bi-trash3"></i> Eliminar  <!-- Botón para eliminar el cliente -->
                                         </a>
                                     </div>
                                 </td>
@@ -130,7 +130,7 @@
                             {% empty %}
                             <tr>
                                 <td colspan="4" class="text-center text-muted py-4">
-                                    <i class="bi bi-exclamation-circle"></i> No hay clientes registrados
+                                    <i class="bi bi-exclamation-circle"></i> No hay clientes registrados  <!-- Mensaje cuando no hay clientes -->
                                 </td>
                             </tr>
                             {% endfor %}
@@ -185,7 +185,7 @@
                 tbody.innerHTML = `
                     <tr class="no-results">
                         <td colspan="4" class="text-center text-danger py-4">
-                            <i class="bi bi-exclamation-triangle"></i> No se encontraron resultados
+                            <i class="bi bi-exclamation-triangle"></i> No se encontraron resultados  <!-- Mensaje cuando no hay resultados de búsqueda -->
                         </td>
                     </tr>
                 `;

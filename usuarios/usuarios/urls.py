@@ -20,10 +20,10 @@ from django.urls import path, include
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('vforce.urls')),
-    path('check_email/', views.check_email, name='check_email'),
-    path('check_telefono/', views.check_telefono, name='check_telefono'),
-    path('check_duplicate/', views.check_duplicate, name='check_duplicate'),
-    path('check_nombre/', views.check_nombre, name='check_nombre')
+    path('admin/', admin.site.urls),  # Ruta para el panel de administración
+    path('', include('vforce.urls')),  # Incluye las URLs de la app vforce
+    path('check_email/', views.check_email, name='check_email'),  # Ruta para verificar si el email ya está registrado
+    path('check_telefono/', views.check_telefono, name='check_telefono'),  # Ruta para verificar si el teléfono ya está registrado
+    path('check_duplicate/', views.check_duplicate, name='check_duplicate'),  # Ruta para verificar duplicados
+    path('check_nombre/', views.check_nombre, name='check_nombre')  # Ruta para verificar si el nombre ya está registrado
 ]

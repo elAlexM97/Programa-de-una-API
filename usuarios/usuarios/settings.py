@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'vforce',
+    'vforce',   # Agrega la aplicación 'myapp' a las apps instaladas
 ]
 
 MIDDLEWARE = [

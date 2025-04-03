@@ -47,24 +47,24 @@
                     <div class="card-header">
                         <h2 class="mb-0">
                             <i class="bi bi-exclamation-octagon"></i>
-                            Confirmar Eliminación
+                            Confirmar Eliminación  <!-- Título de la tarjeta -->
                         </h2>
                     </div>
                     
                     <div class="card-body text-center">
                         <div class="alert alert-warning" role="alert">
-                            <h4 class="alert-heading">¿Eliminar permanentemente{{ cliente.nombre }}?</h4>
-                            <p class="mb-0">Esta acción no se puede deshacer. Todos los datos asociados serán eliminados.</p>
+                            <h4 class="alert-heading">¿Eliminar permanentemente{{ cliente.nombre }}?</h4>  <!-- Pregunta de confirmación con el nombre del cliente -->
+                            <p class="mb-0">Esta acción no se puede deshacer. Todos los datos asociados serán eliminados.</p>  <!-- Advertencia sobre la acción irreversible -->
                         </div>
                         
                         <form method="post" class="mt-4">
-                            {% csrf_token %}
+                            {% csrf_token %}  <!-- Token de seguridad para el formulario -->
                             <div class="d-flex justify-content-center gap-3">
                                 <button type="submit" class="btn btn-danger px-4">
-                                    <i class="bi bi-trash3"></i> Confirmar Eliminación
+                                    <i class="bi bi-trash3"></i> Confirmar Eliminación  <!-- Botón para confirmar la eliminación -->
                                 </button>
                                 <a href="{% url 'lista_clientes' %}" class="btn btn-secondary px-4">
-                                    <i class="bi bi-x-circle"></i> Cancelar
+                                    <i class="bi bi-x-circle"></i> Cancelar  <!-- Botón para cancelar y regresar a la lista de clientes -->
                                 </a>
                             </div>
                         </form>
